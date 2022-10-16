@@ -75,7 +75,7 @@ static const Layout layouts[] = {
 static const char *dmenucmd[] = { "dmenu_run", "-fn", dmenufont, "-nb", col_darkblue, "-nf", col_neongreen, "-sb", col_neongreen, "-sf", col_darkblue, NULL };
 static const char *termcmd[]  = { "st", NULL };
 static const char *slockcmd[] = { "slock", NULL };
-static const char *mancmd[] = { "st", "-f", dmenufont, "-e", "man", "sigma-linux", NULL };
+static const char *mancmd[] = { "st", "-f", dmenufont, "-c", "wmprompt", "-e", "man", "sigma-linux", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
