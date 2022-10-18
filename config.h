@@ -77,6 +77,8 @@ static const char *termcmd[]  = { "st", NULL };
 static const char *slockcmd[] = { "slock", NULL };
 static const char *mancmd[] = { "st", "-f", dmenufont, "-c", "wmprompt", "-e", "man", "sigma-linux", NULL };
 static const char *scrshtcmd[] = { "scrsht", NULL };
+static const char *filemancmd[] = { "xfe", NULL };
+static const char *kbdlayoutcmd[] = { "chkbdlayout", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -84,6 +86,8 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
         { MODKEY|ShiftMask,             XK_x,      spawn,          {.v = slockcmd } },
         { MODKEY|ShiftMask,             XK_m,      spawn,          {.v = mancmd } },
+        { MODKEY,                       XK_e,      spawn,          {.v = filemancmd } },
+        { MODKEY|ShiftMask,             XK_Escape, spawn,          {.v = kbdlayoutcmd } },
         { MODKEY,                       XK_Print,  spawn,          {.v = scrshtcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	STACKKEYS(MODKEY,                          focus) 
